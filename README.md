@@ -1,5 +1,5 @@
 # .NET CORE SDK
-This is the GoodID SDK, written in Mocrosoft .NET Core 2.2
+This is the GoodID SDK, written in Microsoft .NET Core 2.2
 ## Installation
 The GoodID SDK requires the [Microsoft .NET Core 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2)  framework or any compatible version.
 To install the framework, please follow the instruction on the linked site.
@@ -26,7 +26,7 @@ dotnet build -c Release
 The command has created a `dotnetcoreapp2.2` directory in the bin folder of all of the project folders, which contains the built DLLs.
 
 ## Running the application
-**IMPORTANT**: THIS SECTION IS OUTDATED. YOU CAN FIND [HERE](https://github.com/idandtrust/goodid-dotnet-sdk/) THE EXAMPLE PROJECT
+**IMPORTANT**: THIS SECTION IS OUTDATED. YOU CAN FIND [HERE](https://github.com/idandtrust/goodid-dotnet-sdk-demo/) THE EXAMPLE PROJECT
 
 After a successful build you can run the application. **IMPORTANT:** The application needs to be configured to work properly. see [Configuring the application](#head-configuring-the-application) section .
 
@@ -88,7 +88,7 @@ The `EndPoints.Http.Url` value tells the initial IP address and Port number, whe
 
 **IMPORTANT:** If you are using a proxy before the Kestrel, leave the IP address on the loopback address (127.0.0.1)
 
-For more configuration possibilities, please read the [Miscrosoft documentation](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-2.2)
+For more configuration possibilities, please read the [Microsoft documentation](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-2.2)
 #### Logging section
 Responsible for logs appearing in the console.
 For the LogLevel values. please  [visit the Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.loglevel?view=aspnetcore-2.2)
