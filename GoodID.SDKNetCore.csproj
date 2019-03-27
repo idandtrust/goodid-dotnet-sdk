@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <PackageIconUrl>https://s3-us-west-2.amazonaws.com/goodid/goodid_logo_180.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/idandtrust/goodid-dotnet-sdk</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/idandtrust/goodid-dotnet-sdk/blob/master/LICENSE</PackageLicenseUrl>
+    <Description>This SDK that allows you to collect, decrypt and verify the data that you receive from user.</Description>
+    <Product>GoodID</Product>
+    <Company>ID&amp;Trust Ltd</Company>
+    <Authors>GoodID</Authors>
+    <PackageId>GoodID.SDKNetCore</PackageId>
+    <PackageTags>OpenId, GoodId, SDK</PackageTags>
+    <PackageProjectUrl>https://goodid.net/</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <AssemblyVersion>3.1.0.0</AssemblyVersion>
+    <FileVersion>3.1.0.0</FileVersion>
+    <VersionPrefix>3.1.0</VersionPrefix>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="tests\**" />
+    <EmbeddedResource Remove="tests\**" />
+    <None Remove="tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BouncyCastle.NetCoreSdk" Version="1.9.0.1" />
+    <PackageReference Include="jose-jwt" Version="2.4.0" />
+    <PackageReference Include="JsonLogic.Net" Version="1.1.5" />
+  </ItemGroup>
+</Project>
