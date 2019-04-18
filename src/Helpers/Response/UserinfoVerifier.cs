@@ -19,14 +19,12 @@
 /// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 /// DEALINGS IN THE SOFTWARE.
 ///
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json.Linq;
-using GoodId.Core.Helpers.ClaimChecker;
-using Newtonsoft.Json;
-using Jose;
 using GoodId.Core.Exceptions;
+using GoodId.Core.Helpers.ClaimChecker;
+using Jose;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Text;
 
 namespace GoodId.Core.Helpers.Response
 {

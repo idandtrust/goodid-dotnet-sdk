@@ -19,9 +19,9 @@
 /// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 /// DEALINGS IN THE SOFTWARE.
 ///
-using System;
 using GoodId.Core.Exceptions;
 using Newtonsoft.Json.Linq;
+using System;
 
 namespace GoodId.Core.Helpers.OpenIdRequestSources
 {

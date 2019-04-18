@@ -22,13 +22,10 @@
 using GoodId.Core.Exceptions;
 using GoodId.Core.Helpers.Key;
 using Jose;
-using Microsoft.VisualBasic.CompilerServices;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Security.Cryptography;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace GoodId.Core.Helpers.Response
 {

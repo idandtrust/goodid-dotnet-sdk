@@ -1,4 +1,6 @@
-﻿///
+﻿using GoodId.Core.Exceptions;
+using Newtonsoft.Json.Linq;
+///
 /// Copyright 2017 ID&Trust, Ltd.
 ///
 /// You are hereby granted a non-exclusive, worldwide, royalty-free license to
@@ -20,10 +22,6 @@
 /// DEALINGS IN THE SOFTWARE.
 ///
 using System;
-using System.Collections.Generic;
-using System.Text;
-using Newtonsoft.Json.Linq;
-using GoodId.Core.Exceptions;
 
 namespace GoodId.Core.Helpers.ClaimChecker
 {
@@ -45,7 +43,12 @@ namespace GoodId.Core.Helpers.ClaimChecker
 
         public void CheckClaim(JToken token)
         {
-            var offset = DateTimeOffset.FromUnixTimeSeconds((long)token);
+            long milliseconds = (long)token;
+
+            DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(milliseconds).ToLocalTime();
+            DateTimeOffset offset = dtDateTime;
+
             var issuedAtTime = offset.UtcDateTime;
 
             if (issuedAtTime.AddSeconds(-1 * timeToleranceInSeconds).CompareTo(DateTime.UtcNow) > 0)

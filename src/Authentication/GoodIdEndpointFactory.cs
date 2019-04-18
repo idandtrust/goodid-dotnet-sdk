@@ -19,12 +19,12 @@
 /// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 /// DEALINGS IN THE SOFTWARE.
 ///
+using GoodId.Core.AbstractClasses;
 using GoodId.Core.Authentication.Endpoint;
+using GoodId.Core.Exceptions;
 using GoodId.Core.Helpers;
 using GoodId.Core.Helpers.Key;
 using GoodId.Core.Helpers.OpenIdRequestSources;
-using GoodId.Core.AbstractClasses;
-using GoodId.Core.Exceptions;
 using System;
 
 namespace GoodId.Core.Authentication

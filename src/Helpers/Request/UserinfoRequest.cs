@@ -19,13 +19,13 @@
 /// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 /// DEALINGS IN THE SOFTWARE.
 ///
+using GoodId.Core.Exceptions;
+using GoodId.Core.Helpers.Response;
 using System;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using GoodId.Core.Exceptions;
-using GoodId.Core.Helpers.Response;
 
 namespace GoodId.Core.Helpers.Request
 {

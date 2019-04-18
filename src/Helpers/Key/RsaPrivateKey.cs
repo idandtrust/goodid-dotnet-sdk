@@ -19,12 +19,9 @@
 /// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 /// DEALINGS IN THE SOFTWARE.
 ///
-using System;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Text;
 using GoodId.Core.Exceptions;
 using Jose;
+using System.Collections.Generic;
 
 namespace GoodId.Core.Helpers.Key
 {

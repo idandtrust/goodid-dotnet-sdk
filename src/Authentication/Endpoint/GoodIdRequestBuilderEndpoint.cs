@@ -19,17 +19,16 @@
 /// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 /// DEALINGS IN THE SOFTWARE.
 ///
-using System;
-using System.Collections.Generic;
 using GoodId.Core.AbstractClasses;
-using GoodId.Core.Helpers;
 using GoodId.Core.Exceptions;
+using GoodId.Core.Helpers;
 using GoodId.Core.Helpers.HttpResponses;
 using GoodId.Core.Helpers.Key;
 using GoodId.Core.Helpers.OpenIdRequestSources;
-using Newtonsoft.Json.Linq;
 using Jose;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 
 namespace GoodId.Core.Authentication.Endpoint
 {

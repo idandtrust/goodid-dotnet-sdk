@@ -19,12 +19,12 @@
 /// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 /// DEALINGS IN THE SOFTWARE.
 ///
-using System;
-using System.Security.Cryptography;
-using System.Text;
 using GoodId.Core.Exceptions;
 using Jose;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace GoodId.Core.Helpers.Key
 {
@@ -55,6 +55,7 @@ namespace GoodId.Core.Helpers.Key
                 $"{{\"crv\":\"{crv}\",\"kty\":\"{kty}\",\"x\":\"{x}\",\"y\":\"{y}\"}}")));
         }
 
+#if (NETCOREAPP2_1 || NETSTANDARD2_0)
         static ECDsa CreatePublicKey(ECCurve curve, byte[] x, byte[] y)
         {
 
@@ -69,6 +70,7 @@ namespace GoodId.Core.Helpers.Key
                 D = null
             });
         }
+#endif
 
         internal static string VerifySelfSignedCompactJws(string compactJws)
         {
@@ -90,13 +92,21 @@ namespace GoodId.Core.Helpers.Key
             }
 
             string x, y;
+#if (NETCOREAPP2_1 || NETSTANDARD2_0)
             ECDsa key;
-
+#else
+            CngKey key;
+#endif
             try
             {
                 x = (string)subJwk["x"];
                 y = (string)subJwk["y"];
+
+#if (NETCOREAPP2_1 || NETSTANDARD2_0)
                 key = CreatePublicKey(ECCurve.NamedCurves.nistP256, Base64Url.Decode(x), Base64Url.Decode(y));
+#else
+                key = Security.Cryptography.EccKey.New(Base64Url.Decode(x), Base64Url.Decode(y));
+#endif
             }
             catch (Exception)
             {

@@ -71,6 +71,8 @@ namespace GoodId.Core.Helpers
             {
                 byte[] x = Base64Url.Decode(jwk["x"].ToString());
                 byte[] y = Base64Url.Decode(jwk["y"].ToString());
+
+#if (NETCOREAPP2_1 || NETSTANDARD2_0)
                 var publicKey = ECDsa.Create(new ECParameters
                 {
                     Curve = ECCurve.NamedCurves.nistP256,
@@ -83,20 +85,34 @@ namespace GoodId.Core.Helpers
                 });
 
                 var decoded = JWT.Decode(JwsJson, publicKey);
+#else
+                CngKey cngKey = EccKey.New(x, y);
+                var decoded = JWT.Decode(JwsJson, cngKey);
+#endif
                 return;
             }
             else if ("RSA".Equals(jwk["kty"].ToString()))
             {
                 byte[] n = Base64Url.Decode(jwk["n"].ToString());
                 byte[] e = Base64Url.Decode(jwk["e"].ToString());
-                var publicKey = RsaKey.New(e, n);
+
+                using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider())
+                {
+
+                    RSAParameters rsaParameters = new RSAParameters
+                    {
+                        Exponent = e,
+                        Modulus = n
+                    };
+                    RSA.ImportParameters(rsaParameters);
+                    JWT.Decode(JwsJson, RSA);
+                    return;
+                }
+                /*var publicKey = RsaKey.New(e, n);
                 var decoded = JWT.Decode(JwsJson, publicKey);
-                return;
+                return;*/
             }
         }
-
-
-
 
         private static JObject SortJObject(JObject jObj)
         {

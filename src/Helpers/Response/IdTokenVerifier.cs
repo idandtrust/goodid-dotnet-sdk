@@ -21,7 +21,6 @@
 ///
 using GoodId.Core.Helpers.ClaimChecker;
 using Newtonsoft.Json.Linq;
-using System.Collections.Generic;
 
 namespace GoodId.Core.Helpers.Response
 {
@@ -57,7 +56,7 @@ namespace GoodId.Core.Helpers.Response
             checkerManager.Add(new GoodIDSignaturesChecker(this.idToken));
 
             checkerManager.Add(new GoodIDEmailHashExistenceChecker(), true);
-            checkerManager.Add(new GoodIDUihExitenceChecker(),true);
+            checkerManager.Add(new GoodIDUihExsistenceChecker(),true);
 
 
         }

@@ -21,7 +21,8 @@
 ///
 using Newtonsoft.Json.Linq;
 
-namespace GoodId.Core.Helpers.ClaimChecker {
+namespace GoodId.Core.Helpers.ClaimChecker
+{
 
     public interface IClaimChecker {
         /**

@@ -19,9 +19,9 @@
 /// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 /// DEALINGS IN THE SOFTWARE.
 ///
+using GoodId.Core.Helpers.Key;
 using System.Net.Http;
 using System.Threading.Tasks;
-using GoodId.Core.Helpers.Key;
 
 namespace GoodId.Core.Helpers.OpenIdRequestSources
 {

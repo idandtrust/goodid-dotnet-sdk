@@ -26,9 +26,9 @@ using GoodId.Core.Authentication.Response;
 using GoodId.Core.Exceptions;
 using GoodId.Core.Helpers.Key;
 using GoodId.Core.Helpers.OpenIdRequestSources;
+using GoodId.Core.Helpers.Response;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using GoodId.Core.Helpers.Response;
 
 namespace GoodId.Core.Authentication
 {

@@ -1,3 +1,6 @@
+using GoodId.Core.Exceptions;
+using Jose;
+using Newtonsoft.Json;
 ///
 /// Copyright 2017 ID&Trust, Ltd.
 ///
@@ -19,13 +22,9 @@
 /// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 /// DEALINGS IN THE SOFTWARE.
 ///
-using System.Linq;
 using Newtonsoft.Json.Linq;
 using System;
-using Jose;
 using System.Text;
-using GoodId.Core.Exceptions;
-using Newtonsoft.Json;
 
 namespace GoodId.Core.Helpers.ClaimChecker
 {

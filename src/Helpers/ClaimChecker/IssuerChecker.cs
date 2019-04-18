@@ -1,4 +1,5 @@
-﻿///
+﻿using GoodId.Core.Exceptions;
+///
 /// Copyright 2017 ID&Trust, Ltd.
 ///
 /// You are hereby granted a non-exclusive, worldwide, royalty-free license to
@@ -19,11 +20,7 @@
 /// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 /// DEALINGS IN THE SOFTWARE.
 ///
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Newtonsoft.Json.Linq;
-using GoodId.Core.Exceptions;
 
 namespace GoodId.Core.Helpers.ClaimChecker
 {

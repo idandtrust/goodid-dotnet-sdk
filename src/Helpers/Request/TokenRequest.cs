@@ -19,17 +19,17 @@
 /// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 /// DEALINGS IN THE SOFTWARE.
 ///
+using GoodId.Core.AbstractClasses;
+using GoodId.Core.Exceptions;
+using GoodId.Core.Helpers.Response;
+using Jose;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using GoodId.Core.AbstractClasses;
-using GoodId.Core.Exceptions;
-using GoodId.Core.Helpers.Response;
-using Newtonsoft.Json.Linq;
-using Jose;
 
 namespace GoodId.Core.Helpers.Request
 {

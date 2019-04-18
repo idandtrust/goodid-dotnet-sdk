@@ -19,11 +19,11 @@
 /// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 /// DEALINGS IN THE SOFTWARE.
 ///
+using GoodId.Core.Exceptions;
+using Jose;
 using System;
 using System.Security.Cryptography;
 using System.Text;
-using GoodId.Core.Exceptions;
-using Jose;
 
 namespace GoodId.Core.Helpers.Key
 {
@@ -44,7 +44,9 @@ namespace GoodId.Core.Helpers.Key
             {
                 case KeyFormat.PEM:
                     var RSAParameters = Converters.PemToRsaParameters(key, out mHasPrivateParameters);
-                    mKey = RSA.Create(RSAParameters);
+                    mKey = RSA.Create();
+                    mKey.ImportParameters(RSAParameters);
+
                     break;
                 default:
                     throw new GoodIdException("Unsupported key format");

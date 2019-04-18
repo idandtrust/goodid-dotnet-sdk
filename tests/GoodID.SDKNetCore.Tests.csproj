@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFrameworks>net461;netstandard2.0;net40;net45;net46;netcoreapp2.1</TargetFrameworks>
     <RootNamespace>GoodIdSdkTests</RootNamespace>
 
     <IsPackable>false</IsPackable>

@@ -23,7 +23,7 @@ namespace GoodId.Core.Helpers
 {
     public static class Config
     {
-        public const string GOODID_SDK_VERSION = "3.1.0:dotnet";
+        public const string GOODID_SDK_VERSION = "3.1.2:dotnet";
         public const string GOODID_PROFILE_VERSION = "1.0";
     }
 }
